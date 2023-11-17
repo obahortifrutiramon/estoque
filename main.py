@@ -17,8 +17,6 @@ serviceName = st.secrets["service_Name"]
 userName = st.secrets["user_Name"]
 personalPassword = st.secrets["personal_Password"]
 
-print(hostName)
-
 #dsn_tns = cx_Oracle.makedsn(hostName, portNumber, service_name=serviceName)
 #conn = cx_Oracle.connect(user=userName, password=personalPassword, dsn=dsn_tns)
 
@@ -52,7 +50,8 @@ if __name__ == "__main__":
     # Titulo da pagina
     st.set_page_config(page_title="Acompanhamento de Estoque")
     st.title("Acompanhamento de Estoque\n")
-    
+    st.write(hostName)
+
     #df_kitsalerta = df_kits[df_kits['EXCMIN'] < 5]
     #st.bar_chart(data=df_kitsalerta, x='PRODUTO', y=['EXCMIN'], color=None, width=0, height=0)
     
