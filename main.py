@@ -17,6 +17,8 @@ serviceName = st.secrets["service_Name"]
 userName = st.secrets["user_Name"]
 personalPassword = st.secrets["personal_Password"]
 
+print(hostName)
+
 #dsn_tns = cx_Oracle.makedsn(hostName, portNumber, service_name=serviceName)
 #conn = cx_Oracle.connect(user=userName, password=personalPassword, dsn=dsn_tns)
 
