@@ -50,7 +50,6 @@ if __name__ == "__main__":
     # Titulo da pagina
     st.set_page_config(page_title="Acompanhamento de Estoque")
     st.title("Acompanhamento de Estoque\n")
-    st.write(serviceName)
 
     #df_kitsalerta = df_kits[df_kits['EXCMIN'] < 5]
     #st.bar_chart(data=df_kitsalerta, x='PRODUTO', y=['EXCMIN'], color=None, width=0, height=0)
