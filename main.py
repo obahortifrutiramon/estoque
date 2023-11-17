@@ -11,11 +11,11 @@ skusList = list(df_skus['SEQPRODUTO'].drop_duplicates())
 
 
 
-hostName = st.secrets["hostName"]
-portNumber = st.secrets["portNumber"]
-serviceName = st.secrets["serviceName"]
-userName = st.secrets["userName"]
-personalPassword = st.secrets["personalPassword"]
+hostName = st.secrets["host_Name"]
+portNumber = st.secrets["port_Number"]
+serviceName = st.secrets["service_Name"]
+userName = st.secrets["user_Name"]
+personalPassword = st.secrets["personal_Password"]
 
 dsn_tns = cx_Oracle.makedsn(hostName, portNumber, service_name=serviceName)
 conn = cx_Oracle.connect(user=userName, password=personalPassword, dsn=dsn_tns)
