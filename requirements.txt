@@ -2,4 +2,4 @@ streamlit
 pandas
 openpyxl
 matplotlib
-cx_Oracle
+cx_Oracle==8.2.1
