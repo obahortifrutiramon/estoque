@@ -17,16 +17,16 @@ serviceName = st.secrets["service_Name"]
 userName = st.secrets["user_Name"]
 personalPassword = st.secrets["personal_Password"]
 
-dsn_tns = cx_Oracle.makedsn(hostName, portNumber, service_name=serviceName)
-conn = cx_Oracle.connect(user=userName, password=personalPassword, dsn=dsn_tns)
+#dsn_tns = cx_Oracle.makedsn(hostName, portNumber, service_name=serviceName)
+#conn = cx_Oracle.connect(user=userName, password=personalPassword, dsn=dsn_tns)
 
-c = conn.cursor()
+#c = conn.cursor()
 
-query1 = '''
-    select nroempresa, seqproduto, estqloja, qtdreservadavda from consinco.mrl_produtoempresa 
-    where seqproduto in (''' + str(skusList).replace('[','').replace(']','') + ''') 
-    '''
-df_estoque = pd.read_sql_query(query1, conn)
+#query1 = '''
+#    select nroempresa, seqproduto, estqloja, qtdreservadavda from consinco.mrl_produtoempresa 
+#    where seqproduto in (''' + str(skusList).replace('[','').replace(']','') + ''') 
+#    '''
+#df_estoque = pd.read_sql_query(query1, conn)
 
 
 
@@ -40,8 +40,8 @@ df_kits = df[['SKU VTEX','PRODUTO','NROEMPRESA','EXCMIN']].drop_duplicates()
 df_prod = df[['SEQPRODUTO','PRODUTO','NROEMPRESA','EXCEDENTE']].drop_duplicates()
 
 # def plot_grafico(dataframe):
-# #     fig, ax = plt.subplots()
-# #     ax.bar(x='PRODUTO', height='EXCEDENTE', width=0.8, data=dataframe)
+#     fig, ax = plt.subplots()
+#     ax.bar(x='PRODUTO', height='EXCEDENTE', width=0.8, data=dataframe)
 #     return fig
 
 
