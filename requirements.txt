@@ -4,5 +4,4 @@ openpyxl
 matplotlib
 cx_Oracle==8.2.1
 pysftp==0.2.9 
-io
 plotly
