@@ -54,8 +54,42 @@ if __name__ == "__main__":
     #df_kitsalerta = df_kits[df_kits['EXCMIN'] < 5]
     #st.bar_chart(data=df_kitsalerta, x='PRODUTO', y=['EXCMIN'], color=None, width=0, height=0)
     
-#     figura = plot_grafico(df.head(5))
-#     st.pyplot(figura)
+    import platform
     
+    # Diretório de trabalho atual
+    current_directory = os.getcwd()
+    st.write("Diretório de trabalho atual:", current_directory)
+
+    # Informações sobre o sistema
+    system_info = platform.system()
+    st.write("Sistema operacional:", system_info)
+
+    # Versão do sistema operacional
+    version_info = platform.version()
+    st.write("Versão do sistema operacional:", version_info)
+
+    # Arquitetura do sistema
+    architecture_info = platform.architecture()
+    st.write("Arquitetura do sistema:", architecture_info)
+
     
+    import socket
+
+    # Verifique se o script está sendo executado no Streamlit
+    is_streamlit = 'st' in globals()
+
+    if is_streamlit:
+        st.write("Versão do Streamlit:", st.__version__)
+        st.write("Está sendo executado no Streamlit:", is_streamlit)
+
+        try:
+            # Tente obter o nome do host usando socket
+            host_name = socket.gethostname()
+            st.write("Nome do host:", host_name)
+        except Exception as e:
+            st.write("Erro ao obter o nome do host:", e)
+
+        st.write("Porta do servidor:", st.config.get_option("server.port"))
+    else:
+        print("Este script não está sendo executado no Streamlit.")
     
