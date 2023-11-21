@@ -38,3 +38,4 @@ fig = px.bar(df, x='SEQPRODUTO', y='EXCEDENTE', title='Excedente por SKU',
 
 # Exibir o gráfico no Streamlit
 st.plotly_chart(fig)
+st.write('ok')
