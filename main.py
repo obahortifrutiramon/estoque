@@ -7,10 +7,10 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 
 
-myHostname = st.secrets[hostname]
-port = st.secrets[portnumber]
-myUsername = st.secrets[username]
-myPassword = st.secrets[password]
+myHostname = st.secrets['hostname']
+port = st.secrets['portnumber']
+myUsername = st.secrets['username']
+myPassword = st.secrets['password']
 
 cnopts = pysftp.CnOpts()
 cnopts.hostkeys = None
