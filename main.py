@@ -18,7 +18,7 @@ userName = st.secrets["user_Name"]
 personalPassword = st.secrets["personal_Password"]
 
 dsn_tns = cx_Oracle.makedsn(hostName, portNumber, service_name=serviceName)
-#conn = cx_Oracle.connect(user=userName, password=personalPassword, dsn=dsn_tns)
+conn = cx_Oracle.connect(user=userName, password=personalPassword, dsn=dsn_tns)
 
 #c = conn.cursor()
 
